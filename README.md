@@ -1,5 +1,6 @@
-# middleware-shell-exporter [ENGLISH](README-en.md)）
-Middleware Shell Exporter可以执行所有类型的脚本并推送到Prometheu(Victoriametrics)。
+# middleware-shell-exporter （[ENGLISH](README-en.md)）
+Middleware Shell Exporter可以执行所有类型的脚本并推送到Prometheus(Victoriametrics)。
+
 这是专门给DBA和运维人员提供的方案(DB类中间件执行一次读写才能判断这个中间件是否健康),并且支持自定义检查模块。
 
 ![GitHub](https://img.shields.io/badge/license-GPL-blue.svg)
@@ -25,4 +26,4 @@ Middleware Shell Exporter可以执行所有类型的脚本并推送到Prometheu(
 * 支持自定义输出转指标
 
 ## 指标说明
-* [指标示例](/docs/other/METRICS.md) 
+* [指标示例](docs/other/METRICS.md) 
