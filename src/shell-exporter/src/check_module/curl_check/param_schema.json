@@ -1,0 +1,7 @@
+{
+  "urls": {
+    "type": "string",
+    "regex":"(^http.*)"
+  }
+}
+

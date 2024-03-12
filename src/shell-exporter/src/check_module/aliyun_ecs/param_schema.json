@@ -1,0 +1,24 @@
+{
+  "accesskeyid": {
+    "type": "string",
+    "regex":".*"
+  },
+  "accesskeysecret": {
+    "type": "string",
+    "regex":".*"
+  },
+  "region": {
+    "type": "string",
+    "regex":".*"
+  },
+  "endpoint": {
+    "type": "string",
+    "regex":".*"
+  },
+  "needreq": {
+    "type": "string",
+    "regex":".*"
+  }
+
+}
+

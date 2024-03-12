@@ -1,0 +1,57 @@
+version: '3'
+services:
+    redis_master_f:
+        container_name: redis_master_f
+        image: redis:6.0.5-alpine3.12
+
+    redis_slave_f:
+        container_name: redis_slave_f
+        image: redis:6.0.5-alpine3.12
+        command: ["redis-server", "--replicaof redis_master1 6379"]
+
+    redis_slave_s:
+        container_name: redis_slave_s
+        image: redis:6.0.5-alpine3.12
+        command: ["redis-server", "--replicaof redis_master1 6379"]
+
+    mongo_standalone_f:
+        image: mongo:4.4.13
+        container_name: mongo_standalone_f
+        restart: always
+        # command: --config /etc/mongo/mongod.conf
+
+    mysql_standalone_f:
+        image: mysql:5.7
+        container_name: mysql_standalone_f
+        # ports:
+        # - 3306:3306
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: 123456
+            MYSQL_DATABASE: mysql_blackbox_check
+            MYSQL_USER: exporter_user
+            MYSQL_PASSWORD: 12345678
+            TZ: Asia/Shanghai
+        volumes:
+            - "./init.sql:/docker-entrypoint-initdb.d/codepush-init.sql" 
+        command:
+        - --character-set-server=utf8mb4
+        - --collation-server=utf8mb4_unicode_ci
+
+    push-gateway:
+        container_name: push-gateway
+        image: 48n6e/push-gateway:1.0.1
+        volumes:
+            - "./config.json:/home/config.json"
+
+    shell-exporter:
+        container_name: shell-exporter
+        image: 48n6e/shell-exporter:1.0.1
+        volumes:
+            - "./config.env:/home/src/config.env" 
+
+    victoria:
+        image: victoriametrics/victoria-metrics:v1.99.0
+        container_name: victoria
+        ports:
+            - "8428:8428"

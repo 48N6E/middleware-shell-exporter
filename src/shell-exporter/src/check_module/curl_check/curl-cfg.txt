@@ -1,0 +1,4 @@
+\n
+ http_code(状态码): %{http_code},http_connect(..): %{http_connect} , url_effective(最终URL): %{url_effective} \n , ssl_verify_result(ssl认证结果): %{ssl_verify_result} \n , redirect_url(重定向地址): %{redirect_url} , remote_ip: %{remote_ip},remote_port: %{remote_port}\n , local_ip: %{local_ip},local_port: %{local_port} , time_namelookup(DNS解析时间): %{time_namelookup}s , time_redirect(重定向时间): %{time_redirect}s , time_connect(连接时间): %{time_connect}s , time_appconnect(连接建立完成时间): %{time_appconnect}s , time_pretransfer(从开始到准备传输的时间): %{time_pretransfer}s , time_starttransfer(开始传输时间): %{time_starttransfer}s , size_download: %{size_download}bytes , speed_download: %{speed_download}B/s\n
+ ----------\n
+ time_total: %{time_total}s\n

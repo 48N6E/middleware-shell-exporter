@@ -1,0 +1,24 @@
+{
+    "victoria_url": "http://127.0.0.1:8428",
+    "victoria_post_timeout_sec": 5,
+    "scape_inteval_sec": 10,
+    "scape_timeout_sec": 5,
+    "targets": [
+        {
+            "source_url": "http://127.0.0.1:5789/api/v1/exec/redis_standalone?host=127.0.0.1&port=6379&passwd=&key=",
+            "addition_labels": {
+                "instance": "redis1",
+                "name": "xxx1"
+            }
+        },
+        {
+            "source_url": [
+                "http://127.0.0.1:5789/api/v1/exec/redis_standalone?host=127.0.0.1&port=6379&passwd=&key="
+            ],
+            "addition_labels": {
+                "instance": "redis1",
+                "name": "xxx1"
+            }
+        }
+    ]
+}

@@ -1,0 +1,31 @@
+{
+  "host": {
+    "type": "string",
+    "regex":"(^((2((5[0-5])|([0-4]\\d)))|([0-1]?\\d{1,2}))(\\.((2((5[0-5])|([0-4]\\d)))|([0-1]?\\d{1,2}))){3}$)|(^svc.*)|(.*host.*)"
+  },
+  "user": {
+    "type": "string",
+    "regex":"[a-zA-Z]{0,40}"
+  },
+  "port": {
+    "type": "int",
+    "regex":"[0-9]{1,5}"
+  },
+  "passwd": {
+    "type": "string",
+    "regex":"[0-9a-zA-Z!@#$_&*+-;]{0,40}"
+  },
+  "replicaSet": {
+    "type": "string",
+    "regex":"[0-9a-zA-Z!@#$_&*+-]{1,40}"
+  },
+  "db": {
+    "type": "string",
+    "regex":"[0-9a-zA-Z-]{1,40}"
+  },
+  "authSource": {
+    "type": "string",
+    "regex":"[0-9a-zA-Z-]{1,40}"
+  }
+}
+

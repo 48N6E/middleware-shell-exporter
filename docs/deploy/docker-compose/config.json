@@ -1,0 +1,33 @@
+{
+        "victoria_url": "http://victoria:8428",
+        "victoria_post_timeout_sec": 5,
+        "scape_inteval_sec": 30,
+        "scape_timeout_sec": 12,
+        "targets": 
+         [
+            {
+                "source_url": "http://shell-exporter/api/v1/exec/redis_master_slave?master=redis_master_f:6379&slave=redis_slave_f:6379,redis_slave_s:6379&passwd=&key=",
+                "addition_labels": {
+                    "name": "master-slave-1",
+                    "scope": "db",
+                    "important" : "p2"
+                }
+            },
+            {
+                "source_url": "http://shell-exporter/api/v1/exec/mongo_standalone?host=mongo_standalone_f&&user=&port=27017&passwd=&db=test",
+                "addition_labels": {
+                    "name": "mongo-standalone-1",
+                    "scope": "db",
+                    "important" : "p2"
+                }
+            },
+            {
+                "source_url": "http://shell-exporter/api/v1/exec/mysql_standalone?host=mysql_standalone_f&user=exporter_user&port=3306&passwd=12345678&timeout=10",
+                "addition_labels": {
+                    "name": "mysql-standalone-1",
+                    "scope": "db",
+                    "important" : "p2"
+                }
+            }
+        ]
+}

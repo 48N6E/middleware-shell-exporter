@@ -1,0 +1,28 @@
+{
+  "name": "shell-exporter",
+  "version": "1.0.0",
+  "description": "shell-exporter new",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@alicloud/bssopenapi20171214": "^1.2.1",
+    "@alicloud/ecs20140526": "^3.0.13",
+    "@alicloud/pop-core": "^1.7.13",
+    "@opentelemetry/plugin-mongodb": "^0.15.0",
+    "async": "^3.2.4",
+    "child_process": "^1.0.2",
+    "dotenv": "^16.0.1",
+    "exceljs": "^4.2.1",
+    "express": "^4.18.1",
+    "express-rate-limit": "^6.5.1",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4",
+    "morgan": "^1.10.0",
+    "prom-client": "^14.0.1",
+    "request": "^2.88.2"
+  }
+}
