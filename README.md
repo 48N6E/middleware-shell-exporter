@@ -9,6 +9,7 @@ Middleware Shell Exporter可以执行所有类型的脚本并推送到Prometheus
 * [部署文档](/docs/deploy/main.md) 
 
 ## 现有支持检查的中间件
+
 * mongo_replicaset mongo副本部署模式
 * mongo_shard mongo副本分片模式
 * mongo_standalone mongo单机模式
@@ -17,8 +18,10 @@ Middleware Shell Exporter可以执行所有类型的脚本并推送到Prometheus
 * mysql_standalone mysql单机模式
 * curl_check  curl检查api接口健康
 * aliyun_ecs  阿里云的磁盘和ecs详情转换成指标
-
+* kafka_cluster  支持2.x-3.x版本
 ## 特征简介
+
+* 自定义版本的客户端,只要把对应的官方客户端放到bin目录下,就能适配不同的集群
 * 支持自定义shell生成指标
 * 支持定制化检查模块
 * 支持监控,如执行的次数,成功与否等

@@ -28,6 +28,14 @@
                     "scope": "db",
                     "important" : "p2"
                 }
+            },
+            {
+                "source_url": "http://shell-exporter/api/v1/exec/kafka_cluster?host=kafka3611&port=9092&topic=kafka_blackbox_check&timeout=8000&group=blackbox-healthcheck",
+                "addition_labels": {
+                    "name": "kafka_cluster-1",
+                    "scope": "db",
+                    "important" : "p2"
+                }
             }
         ]
 }

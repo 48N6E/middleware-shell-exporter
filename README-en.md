@@ -8,8 +8,6 @@ This is a solution specifically provided for DBAs and operations personnel (DB t
 # How to deploy
 * [Deployment Document](/docs/deploy/main.md)
 
-
-
 ## Existing middleware that supports inspection
 
 * Mongo-replicaset Mongo replica deployment mode
@@ -20,9 +18,10 @@ This is a solution specifically provided for DBAs and operations personnel (DB t
 * MySQL standalone mode、
 * Curl_check curl checks the health of API interfaces
 * Aliyun_ecs Convert Alibaba Cloud's disk and ECS details into metrics
-
+* kafka_cluster supports versions 2.x to 3.x.
 ## Introduction to Features
 
+* Customized version of the client, as long as you put the corresponding official client into the bin directory, it can be adapted to different clusters.
 * Support custom shell generation metrics
 * Support customized inspection modules
 * Support monitoring, such as the number of executions, success or failure, etc
