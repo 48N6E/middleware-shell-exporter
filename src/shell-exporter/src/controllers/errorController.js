@@ -1,6 +1,6 @@
 exports.AppError = class  extends Error {
     constructor(message, statusCode) {
-        super();//所有错误信息变成message
+        super();//all err convert message
         this.message = message;
         this.statusCode = statusCode;
         this.status = `${statusCode}`.startsWith('4') ? 'fail' : 'error';
@@ -20,7 +20,6 @@ const _errorHandler = (err, req, res) => {
 
 
 exports.errorHandler = function ( err, req, res, next) {
-    // console.log(err.stack);
     err.statusCode = err.statusCode || 500;
     err.status = err.status || 'error';
     if (process.env.NODE_ENV === 'development') {

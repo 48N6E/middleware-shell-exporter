@@ -15,7 +15,7 @@ exports.exportMetric =  (req, res, next) => {
 }
 
 function gen_metrics() {
-    //shell 执行详情
+    //shell execute detail
     let shellResultList = _.keys(shellExecResult)
     let metricRegistry = new prom_client.Registry();
     try{
@@ -38,7 +38,7 @@ function gen_metrics() {
     }catch (e){
         console.log( moment().format("YYYY-MM-DD HH:mm:ss ") +'Error 当前ShellMetrics错误！ '  + e)
     }
-    //shell执行统计
+    //shell execute count
     let metricName = {'health_shell_count':Number(process.env.shellCount),'health_shell_successcount':Number(process.env.successCount),'health_shell_failcount':Number(process.env.failCount)}
     let metricNameList = _.keys(metricName)
     let metric = 0

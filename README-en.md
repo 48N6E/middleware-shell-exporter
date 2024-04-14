@@ -5,7 +5,7 @@ This is a solution specifically provided for DBAs and operations personnel (DB t
 
 ![GitHub](https://img.shields.io/badge/license-GPL-blue.svg)
 
-# How to deploy
+# install
 * [Deployment Document](/docs/deploy/main.md)
 
 ## Existing middleware that supports inspection

@@ -157,7 +157,7 @@ function gen_metrics(shellResult,checkModuleName) {
             }
         })
     }
-    //保底模块metricname
+    //base metricname
     if (!exitMetricExists){
         const metric = new AppMetrics({
             name: 'health_' + checkModuleName + '_exit',

@@ -5,7 +5,7 @@ Middleware Shell Exporter可以执行所有类型的脚本并推送到Prometheus
 
 ![GitHub](https://img.shields.io/badge/license-GPL-blue.svg)
 
-# 如何部署
+# 部署
 * [部署文档](/docs/deploy/main.md) 
 
 ## 现有支持检查的中间件
@@ -19,7 +19,7 @@ Middleware Shell Exporter可以执行所有类型的脚本并推送到Prometheus
 * curl_check  curl检查api接口健康
 * aliyun_ecs  阿里云的磁盘和ecs详情转换成指标
 * kafka_cluster  支持2.x-3.x版本
-## 特征简介
+## 特征
 
 * 自定义版本的客户端,只要把对应的官方客户端放到bin目录下,就能适配不同的集群
 * 支持自定义shell生成指标

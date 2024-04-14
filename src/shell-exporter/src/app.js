@@ -4,11 +4,10 @@ const rateLimit = require('express-rate-limit');
 const globalErrorHandler = require('./controllers/errorController').errorHandler;
 const bodyParser = require('body-parser');
 
-
 const execRouter = require('./routes/execRouter');
 const metricRouter = require('./routes/metricRouter');
 
-//创建exress应用
+//Create express
 const app = express();
 
 // Development logging
@@ -29,9 +28,7 @@ app.use('/api/v1/exec', limiter);
 app.use(express.json({ limit: '1000mb' }));
 app.use(bodyParser.urlencoded({limit: '1000mb',extended:false}));
 
-
-//3) ROUTES
-
+//ROUTES
 app.use('/api/v1/exec', execRouter);
 app.use('/api/v1/metrics', metricRouter);
 

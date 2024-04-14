@@ -8,7 +8,7 @@ const prom_client = require('prom-client');
 const crypto = require('crypto');
 const async = require('async');
 
-/*從shell輸出中匹配metrics
+/*match metrics from shell output 
 *
 */
 exports.matchMetrics = function (str) {
@@ -20,7 +20,7 @@ exports.matchMetrics = function (str) {
     let metricList = new Array();
     matchList.forEach(function(item,index) {
         let metricName = item.split('_health ')[0].trim();
-        //有label就读取label
+        //find label
         if ( metricName.indexOf('{') != -1 ) {
             try {
                 let metricLabel = metricName;
@@ -45,7 +45,6 @@ exports.matchMetrics = function (str) {
             metricList[matchList.indexOf(item)] = { 'metricName':metricName,'label':[],'value':metricValue}
         }
     })
-    // console.log(8777,metricList)
     return metricList;
 }
 
@@ -124,7 +123,6 @@ exports.AppMetrics  = class  {
     }
     async metrics(){
         const metricsvalue = await this.registry.metrics()
-        // console.log(metricsvalue)
         return metricsvalue
     }
 }
